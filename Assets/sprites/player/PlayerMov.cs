@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class PlayerMov : MonoBehaviour
 {
-    float speed;
-    // Start is called before the first frame update
-    void Start()
+    public float speed;
+    public float jumpHeight;
+    private Rigidbody2D rb;
+
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Jump()
     {
-        
+        Debug.Log("jump");
+        rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
     }
 }
