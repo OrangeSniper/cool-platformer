@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMov : MonoBehaviour
 {
@@ -13,9 +14,12 @@ public class PlayerMov : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Jump()
+    public void Jump(InputInteractionContext context)
     {
         Debug.Log("jump");
-        rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+        if(context.phase == InputActionPhase.Started)
+        {
+            rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+        }
     }
 }
