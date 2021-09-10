@@ -22,7 +22,7 @@ public class PlayerMov : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 inputVector = new Vector2(inputActions.Movment.Movment.ReadValue<float>() * speed, 0f);
-        rb.AddForce(inputVector * speed, ForceMode2D.Force);
+        rb.velocity = new Vector2(inputVector.x * speed, rb.velocity.y);
     }
 
     public void Jump(InputAction.CallbackContext context)
