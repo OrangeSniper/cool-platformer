@@ -370,7 +370,7 @@ MonoBehaviour:
       - m_Target: {fileID: 899244987}
         m_TargetAssemblyTypeName: PlayerMov, Assembly-CSharp
         m_MethodName: Jump
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -381,6 +381,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d3db0d22-61f9-4a13-9373-8a869eccd474
     m_ActionName: Movment/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 899244987}
+        m_TargetAssemblyTypeName: PlayerMov, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3e30c14d-20e0-4209-ac23-7781642e4d32
+    m_ActionName: Movment/Movment[/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movment
@@ -398,8 +414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772e4e280a3d54e4fad84173e6122eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  jumpHeight: 5
+  speed: 5
+  jumpHeight: 10
 --- !u!1 &917065253
 GameObject:
   m_ObjectHideFlags: 0
