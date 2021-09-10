@@ -13,6 +13,10 @@ public class PlayerMov : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        inputActions = new PlayerInputActions();
+        inputActions.Movment.Enable();
+
     }
 
     private void FixedUpdate()
@@ -28,10 +32,5 @@ public class PlayerMov : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
-    }
-
-    public void Move(InputAction.CallbackContext context)
-    {
-
     }
 }
