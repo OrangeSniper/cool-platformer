@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 275585874}
+  - component: {fileID: 275585875}
   m_Layer: 0
   m_Name: game handler
   m_TagString: Untagged
@@ -153,6 +154,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &275585875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275585873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a879bcacab9370a4bab32c50312c0df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curTrack: 0
+  enemies: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,8 +587,9 @@ GameObject:
   - component: {fileID: 992389172}
   - component: {fileID: 992389175}
   - component: {fileID: 992389174}
+  - component: {fileID: 992389176}
   m_Layer: 0
-  m_Name: Square
+  m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,6 +708,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &992389176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992389171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df29738f92f34374ea659dce36331f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  track: 0
 --- !u!1 &1605362658
 GameObject:
   m_ObjectHideFlags: 0
