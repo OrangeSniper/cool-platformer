@@ -28,7 +28,7 @@ public class PlayerMov : MonoBehaviour
     {
         Vector2 inputVector = new Vector2(inputActions.Movment.Movment.ReadValue<float>() * speed, 0f);
         rb.velocity = new Vector2(inputVector.x * speed, rb.velocity.y);
-        Debug.Log(GCheck());
+        //Debug.Log(GCheck());
         if(GCheck())
         {
             curJumps = jumps;
@@ -37,7 +37,7 @@ public class PlayerMov : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        Debug.Log("jump");
+        //Debug.Log("jump");
         if(context.performed && curJumps > 1)
         {
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);

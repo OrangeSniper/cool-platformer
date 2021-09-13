@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaseBehavior : MonoBehaviour
 {
     public int track;
+    public BehaviorAddBase behavior;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,20 +17,15 @@ public class BaseBehavior : MonoBehaviour
     {
         if(track == 0)
         {
-            Track0Behave();
+            behavior.Track0();
         }else if(track == 1)
         {
-            Track1Behave();
+            behavior.Track1();
         }
-    }
-
-    private void Track0Behave()
-    {
-        Debug.Log("track 1");
-    }
-    private void Track1Behave()
-    {
-        Debug.Log("track 2");
+        else
+        {
+            TrackFallback();
+        }
     }
     private void TrackFallback()
     {

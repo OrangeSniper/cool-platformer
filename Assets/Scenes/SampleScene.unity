@@ -543,6 +543,7 @@ GameObject:
   - component: {fileID: 992389175}
   - component: {fileID: 992389174}
   - component: {fileID: 992389176}
+  - component: {fileID: 992389177}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -676,6 +677,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: 0
+  behavior: {fileID: 992389177}
+--- !u!114 &992389177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992389171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6268d14b359cce34a8411362bc35e1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1605362658
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,5 +775,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8001699335899175379, guid: 734e6ebfd8c8d3748b06065db7b34e5f, type: 3}
+      propertyPath: enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001699335899175379, guid: 734e6ebfd8c8d3748b06065db7b34e5f, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 992389171}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 734e6ebfd8c8d3748b06065db7b34e5f, type: 3}

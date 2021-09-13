@@ -38,4 +38,12 @@ public class Music : MonoBehaviour
     {
         return 60000f / bpm / 1000f;
     }
+
+    private void Update()
+    {
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            enemies[i].GetComponent<BaseBehavior>().track = curTrack;
+        }
+    }
 }
