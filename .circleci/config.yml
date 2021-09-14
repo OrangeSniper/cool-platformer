@@ -39,3 +39,12 @@ workflows:
   sample: 
     jobs:
       - build-and-test
+  build:
+      jobs:
+        - unity-build/build-unity:
+            exec: 
+            android_build: true 
+            app_version: '1.0' 
+            app_name: cool platformer 
+            unity_build_method: exe 
+            unity_bundleversioncode: uh 
