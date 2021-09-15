@@ -8,6 +8,8 @@ public class FirstEnemy : BehaviorAddBase
     private BoxCollider2D boxCollider;
 
     private int track;
+
+    public int damage = 5;
     public override void Track0()
     {
         Debug.Log("track 0");
@@ -25,7 +27,7 @@ public class FirstEnemy : BehaviorAddBase
         if(track == 0 && collision.collider.CompareTag("Player"))
         {
             GameObject player = collision.collider.gameObject;
-            player.GetComponent<PlayerHP>().Damage(5);
+            player.GetComponent<PlayerHP>().Damage(damage);
         }
     }
 }
