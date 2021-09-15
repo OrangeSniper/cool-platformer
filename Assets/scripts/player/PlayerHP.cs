@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHP : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerHP : MonoBehaviour
     public int totalHP;
 
     public Slider hpBar;
+    public TMP_Text hpText;
 
     private void Start()
     {
@@ -26,5 +28,6 @@ public class PlayerHP : MonoBehaviour
     private void Update()
     {
         hpBar.value = (float)hitPoints / totalHP;
+        hpText.text = hitPoints + "/" + totalHP;
     }
 }
