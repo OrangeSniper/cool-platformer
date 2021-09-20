@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2483772330541780946}
   - component: {fileID: 8724556590101695313}
   - component: {fileID: 600980030253087774}
-  - component: {fileID: 1892981968488712600}
+  - component: {fileID: 1528797797335595317}
   m_Layer: 0
   m_Name: weapon
   m_TagString: Untagged
@@ -106,7 +106,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1892981968488712600
+--- !u!114 &1528797797335595317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 0}
+  weaponType: {fileID: 11400000, guid: 94ac1afe75f97ff4898fadbf1a02ba58, type: 2}
 --- !u!1 &3839788501149058171
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +295,7 @@ MonoBehaviour:
     m_ActionName: Movment/Movment[/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1892981968488712600}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
         m_MethodName: PrimFire
         m_Mode: 0
@@ -310,7 +311,7 @@ MonoBehaviour:
     m_ActionName: Movment/shoot[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1892981968488712600}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
         m_MethodName: AltFire
         m_Mode: 0

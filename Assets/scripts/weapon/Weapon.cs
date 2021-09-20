@@ -9,6 +9,8 @@ public class Weapon : MonoBehaviour
 
     private PlayerInputActions inputActions;
 
+    [SerializeField]private WeaponAsset weaponType;
+
     public void PrimFire(InputAction.CallbackContext context)
     {
         Debug.Log("primary Fire");
