@@ -20,6 +20,22 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "primary fire",
+                    "type": "Button",
+                    "id": "02ff8afb-fb1d-4e77-8f83-442c7404de72",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "alt fire",
+                    "type": "Button",
+                    "id": "a3993d85-a439-4a99-acc3-220c0105d634",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -66,6 +82,28 @@
                     "action": "Movment",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "5675e386-a3ee-4026-af72-fb0d7e7eca32",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "primary fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8999bca6-4e21-4a4f-876a-663b3c721066",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "alt fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

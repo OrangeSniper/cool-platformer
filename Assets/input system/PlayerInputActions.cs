@@ -33,6 +33,22 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""primary fire"",
+                    ""type"": ""Button"",
+                    ""id"": ""02ff8afb-fb1d-4e77-8f83-442c7404de72"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""alt fire"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3993d85-a439-4a99-acc3-220c0105d634"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -79,6 +95,28 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Movment"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5675e386-a3ee-4026-af72-fb0d7e7eca32"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""primary fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8999bca6-4e21-4a4f-876a-663b3c721066"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""alt fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -89,6 +127,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Movment = asset.FindActionMap("Movment", throwIfNotFound: true);
         m_Movment_Jump = m_Movment.FindAction("Jump", throwIfNotFound: true);
         m_Movment_Movment = m_Movment.FindAction("Movment", throwIfNotFound: true);
+        m_Movment_primaryfire = m_Movment.FindAction("primary fire", throwIfNotFound: true);
+        m_Movment_altfire = m_Movment.FindAction("alt fire", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -140,12 +180,16 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private IMovmentActions m_MovmentActionsCallbackInterface;
     private readonly InputAction m_Movment_Jump;
     private readonly InputAction m_Movment_Movment;
+    private readonly InputAction m_Movment_primaryfire;
+    private readonly InputAction m_Movment_altfire;
     public struct MovmentActions
     {
         private @PlayerInputActions m_Wrapper;
         public MovmentActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_Movment_Jump;
         public InputAction @Movment => m_Wrapper.m_Movment_Movment;
+        public InputAction @primaryfire => m_Wrapper.m_Movment_primaryfire;
+        public InputAction @altfire => m_Wrapper.m_Movment_altfire;
         public InputActionMap Get() { return m_Wrapper.m_Movment; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -161,6 +205,12 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Movment.started -= m_Wrapper.m_MovmentActionsCallbackInterface.OnMovment;
                 @Movment.performed -= m_Wrapper.m_MovmentActionsCallbackInterface.OnMovment;
                 @Movment.canceled -= m_Wrapper.m_MovmentActionsCallbackInterface.OnMovment;
+                @primaryfire.started -= m_Wrapper.m_MovmentActionsCallbackInterface.OnPrimaryfire;
+                @primaryfire.performed -= m_Wrapper.m_MovmentActionsCallbackInterface.OnPrimaryfire;
+                @primaryfire.canceled -= m_Wrapper.m_MovmentActionsCallbackInterface.OnPrimaryfire;
+                @altfire.started -= m_Wrapper.m_MovmentActionsCallbackInterface.OnAltfire;
+                @altfire.performed -= m_Wrapper.m_MovmentActionsCallbackInterface.OnAltfire;
+                @altfire.canceled -= m_Wrapper.m_MovmentActionsCallbackInterface.OnAltfire;
             }
             m_Wrapper.m_MovmentActionsCallbackInterface = instance;
             if (instance != null)
@@ -171,6 +221,12 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Movment.started += instance.OnMovment;
                 @Movment.performed += instance.OnMovment;
                 @Movment.canceled += instance.OnMovment;
+                @primaryfire.started += instance.OnPrimaryfire;
+                @primaryfire.performed += instance.OnPrimaryfire;
+                @primaryfire.canceled += instance.OnPrimaryfire;
+                @altfire.started += instance.OnAltfire;
+                @altfire.performed += instance.OnAltfire;
+                @altfire.canceled += instance.OnAltfire;
             }
         }
     }
@@ -179,5 +235,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     {
         void OnJump(InputAction.CallbackContext context);
         void OnMovment(InputAction.CallbackContext context);
+        void OnPrimaryfire(InputAction.CallbackContext context);
+        void OnAltfire(InputAction.CallbackContext context);
     }
 }

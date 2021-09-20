@@ -11,6 +11,8 @@ public class PlayerMov : MonoBehaviour
     public int jumps = 2;
     public GameObject GCheckPoint;
 
+    public bool facingRight = true;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,6 +34,14 @@ public class PlayerMov : MonoBehaviour
         if(GCheck())
         {
             curJumps = jumps;
+        }
+
+        if(inputVector.x >= 0)
+        {
+            facingRight = true;
+        }else
+        {
+            facingRight = false;
         }
     }
 
