@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Weapon : MonoBehaviour
+public class Weapon
 {
     public GameObject firePoint;
 
     private PlayerInputActions inputActions;
 
-    [SerializeField]private WeaponAsset weaponType;
 
     public void PrimFire(InputAction.CallbackContext context)
     {
