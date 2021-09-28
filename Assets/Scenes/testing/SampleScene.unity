@@ -471,6 +471,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5233000284631405642, guid: 007f2b4f7ba5329489ed74f09e86aac0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -161.78864
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 007f2b4f7ba5329489ed74f09e86aac0, type: 3}
 --- !u!114 &1860496688973911864 stripped
@@ -482,6 +486,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1860496688973911865 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4030302781445709715, guid: 007f2b4f7ba5329489ed74f09e86aac0, type: 3}
+  m_PrefabInstance: {fileID: 1860496688973911863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75b93c9d755af44d906d0cbdd4d8917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3839788501963990937
@@ -740,6 +755,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3157020737605359478, guid: 734e6ebfd8c8d3748b06065db7b34e5f, type: 3}
+      propertyPath: uiInventory
+      value: 
+      objectReference: {fileID: 1860496688973911865}
     - target: {fileID: 8001699335899175377, guid: 734e6ebfd8c8d3748b06065db7b34e5f, type: 3}
       propertyPath: m_Name
       value: game handler

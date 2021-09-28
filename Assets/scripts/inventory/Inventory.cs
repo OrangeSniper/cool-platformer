@@ -19,4 +19,9 @@ public class Inventory
         itemList.Add(item);
     }
 
+    public List<Item> GetItemList()
+    {
+        return itemList;
+    }
+
 }
