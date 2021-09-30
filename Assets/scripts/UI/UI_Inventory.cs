@@ -6,14 +6,8 @@ public class UI_Inventory : MonoBehaviour
 {
     private Inventory inventory;
 
-    private Transform itemSlotContainer;
-    private Transform itemSlotTemplate;
-
-    private void Awake()
-    {
-        itemSlotContainer = transform.Find("ItemSlotContainer");
-        itemSlotTemplate = itemSlotContainer.Find("item slot template");
-    }
+    public Transform itemSlotContainer;
+    public Transform itemSlotTemplate;
 
     public void SetInventory(Inventory inventory)
     {
@@ -25,7 +19,7 @@ public class UI_Inventory : MonoBehaviour
     {
         int x = 0;
         int y = 0;
-        float itemSlotCellSize = 30f;
+        float itemSlotCellSize = 100f;
         foreach(Item item in inventory.GetItemList())
         {
             RectTransform itemslotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
@@ -33,7 +27,7 @@ public class UI_Inventory : MonoBehaviour
 
             itemslotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             x++;
-            if(x > 0)
+            if(x > 11)
             {
                 x = 0;
                 y++;
