@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMov : MonoBehaviour
 {
+    //base movment
     public float speed;
     public float jumpHeight;
     private Rigidbody2D rb;
@@ -15,10 +16,17 @@ public class PlayerMov : MonoBehaviour
 
     private void Awake()
     {
+        //movement
         rb = GetComponent<Rigidbody2D>();
 
         inputActions = new PlayerInputActions();
         inputActions.Movment.Enable();
+
+        //inventory
+        inventory = new Inventory();
+
+        uiInventory.SetInventory(inventory);
+        uiInventory.SetPlayer(this);
 
     }
     private void Start()
@@ -64,6 +72,24 @@ public class PlayerMov : MonoBehaviour
         }else
         {
             return false;
+        }
+    }
+
+    //inventory
+    private Inventory inventory;
+
+    [SerializeField] private UI_Inventory uiInventory;
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        ItemWorld itemWorld = collision.GetComponent<ItemWorld>();
+        if (itemWorld != null)
+        {
+            //touching item
+            inventory.AddItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
         }
     }
 }
