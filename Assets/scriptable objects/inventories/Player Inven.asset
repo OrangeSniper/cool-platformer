@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e5bf6b28b5f6fe43a04248f280b42a5, type: 3}
-  m_Name: base
+  m_Script: {fileID: 11500000, guid: bc1df357b350e7f4cb23cdf02e54249f, type: 3}
+  m_Name: Player Inven
   m_EditorClassIdentifier: 
-  name: 
+  Container: []

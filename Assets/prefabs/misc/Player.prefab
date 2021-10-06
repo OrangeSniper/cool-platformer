@@ -65,6 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ecc229f1c2fa644898b5869377f47f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allWeapons: []
+  weaponInventory: []
 --- !u!1 &3839788501149058171
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +295,7 @@ MonoBehaviour:
   jumps: 2
   GCheckPoint: {fileID: 3839788501149058171}
   facingRight: 1
+  inventory: {fileID: 11400000, guid: 3a6741578fae8e24792ac4da020fdc06, type: 2}
 --- !u!114 &3839788501787214885
 MonoBehaviour:
   m_ObjectHideFlags: 0

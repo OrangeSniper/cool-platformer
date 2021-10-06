@@ -22,12 +22,6 @@ public class PlayerMov : MonoBehaviour
         inputActions = new PlayerInputActions();
         inputActions.Movment.Enable();
 
-        //inventory
-        inventory = new Inventory();
-
-        uiInventory.SetInventory(inventory);
-        uiInventory.SetPlayer(this);
-
     }
     private void Start()
     {
@@ -74,22 +68,21 @@ public class PlayerMov : MonoBehaviour
             return false;
         }
     }
-
     //inventory
-    private Inventory inventory;
-
-    [SerializeField] private UI_Inventory uiInventory;
-
-
+    public InventoryObject inventory;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ItemWorld itemWorld = collision.GetComponent<ItemWorld>();
-        if (itemWorld != null)
+        var item = collision.GetComponent<Item>();
+        if(item)
         {
-            //touching item
-            inventory.AddItem(itemWorld.GetItem());
-            itemWorld.DestroySelf();
+            inventory.AddItem(item.item, item.amount);
+            Destroy(collision.gameObject);
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        inventory.Container.Clear();
     }
 }
