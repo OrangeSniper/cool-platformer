@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94256fb805afd614e900103854854f27, type: 3}
-  m_Name: test Default
+  m_Script: {fileID: 11500000, guid: a097fc732266e2c469e7a20e7eca6079, type: 3}
+  m_Name: test Currency
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4026537978575712726, guid: ca2b69c558e7fb34e97157b779e07388, type: 3}
-  type: 2
-  Description: the memes
+  prefab: {fileID: 3463754124675335569, guid: 6bb7c20b11258d54484ccc96988e2a13, type: 3}
+  type: 1
+  Description: monet
+  worth: 5

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca718a1065e15c84ba7f39eafb8e4678, type: 3}
   m_Name: test Weapon
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 2115896301135252192, guid: cbda5f79a4cd5124d8363c7085ac2e88, type: 3}
   type: 0
   Description: Weapon
   damage: 5
