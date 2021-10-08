@@ -7,7 +7,8 @@ using TMPro;
 public class DisplayInventory : MonoBehaviour
 {
     public InventoryObject inventory;
-
+    public int xStart;
+    public int yStart;
     public int xSpaceBtwnItems;
     public int columns;
     public int ySpaceBtwnItems;
@@ -25,6 +26,7 @@ public class DisplayInventory : MonoBehaviour
             var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+            itemsDisplayed.Add(inventory.Container[i], obj);
         }
     }
 
@@ -34,13 +36,25 @@ public class DisplayInventory : MonoBehaviour
         UpdateDisplay();
     }
 
-    private void UpdateDisplay()
+    public void UpdateDisplay()
     {
-
+        for (int i = 0; i < inventory.Container.Count; i++)
+        {
+            if(itemsDisplayed.ContainsKey(inventory.Container[i]))
+            {
+                itemsDisplayed[inventory.Container[i]].GetComponent<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+            }else
+            {
+                var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
+                obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
+                obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+                itemsDisplayed.Add(inventory.Container[i], obj);
+            }
+        }
     }
 
     public Vector3 GetPosition(int i)
     {
-        return new Vector3(xSpaceBtwnItems * (i%columns), -ySpaceBtwnItems * (i/columns), 0f);
+        return new Vector3(xStart + (xSpaceBtwnItems * (i % columns)), yStart + (-ySpaceBtwnItems * (i / columns)), 0f);
     }
 }

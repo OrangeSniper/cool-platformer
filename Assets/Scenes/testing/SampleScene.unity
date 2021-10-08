@@ -641,10 +641,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 1860496688977968018, guid: 007f2b4f7ba5329489ed74f09e86aac0, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 1860496688977968021, guid: 007f2b4f7ba5329489ed74f09e86aac0, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -652,10 +648,6 @@ PrefabInstance:
     - target: {fileID: 1860496688980731075, guid: 007f2b4f7ba5329489ed74f09e86aac0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5233000284631405642, guid: 007f2b4f7ba5329489ed74f09e86aac0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -161.78864
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 007f2b4f7ba5329489ed74f09e86aac0, type: 3}
