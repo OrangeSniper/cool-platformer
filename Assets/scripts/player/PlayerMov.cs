@@ -85,4 +85,16 @@ public class PlayerMov : MonoBehaviour
     {
         inventory.Container.Clear();
     }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            inventory.Save();
+        }
+        if(Input.GetKeyDown(KeyCode.Backspace))
+        {
+            inventory.Load();
+        }
+    }
 }
