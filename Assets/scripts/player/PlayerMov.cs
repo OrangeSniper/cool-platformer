@@ -73,7 +73,7 @@ public class PlayerMov : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var item = collision.GetComponent<Item>();
+        var item = collision.GetComponent<GroundItem>();
         if(item)
         {
             inventory.AddItem(item.item, item.amount);
@@ -83,7 +83,7 @@ public class PlayerMov : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        inventory.Container.Clear();
+        //inventory.Container.Clear();
     }
 
     private void Update()
