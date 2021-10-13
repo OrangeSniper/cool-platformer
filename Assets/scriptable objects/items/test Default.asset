@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94256fb805afd614e900103854854f27, type: 3}
   m_Name: test Default
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4026537978575712726, guid: ca2b69c558e7fb34e97157b779e07388, type: 3}
+  Id: 1
+  uiDisplay: {fileID: 7482667652216324306, guid: 48298a665fbb0c44eb2a51f4179a73f5, type: 3}
   type: 2
   Description: the memes

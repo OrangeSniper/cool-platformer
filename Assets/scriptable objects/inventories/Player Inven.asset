@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePath: /playerinven.save
   database: {fileID: 11400000, guid: 8806ce356d0207a4981b769ff9fe485f, type: 2}
-  Container: []
+  Container:
+    items: []

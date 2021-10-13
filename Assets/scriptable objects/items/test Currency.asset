@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a097fc732266e2c469e7a20e7eca6079, type: 3}
   m_Name: test Currency
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3463754124675335569, guid: 6bb7c20b11258d54484ccc96988e2a13, type: 3}
+  Id: 0
+  uiDisplay: {fileID: 21300000, guid: a0e35f6b808bb7447826cc6c69ffe448, type: 3}
   type: 1
   Description: monet
   worth: 5

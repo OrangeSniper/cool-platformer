@@ -24,6 +24,7 @@ public class Item
     public int ID;
     public Item(ItemObject item)
     {
-
+        name = item.name;
+        ID = item.Id;
     }
 }

@@ -76,14 +76,14 @@ public class PlayerMov : MonoBehaviour
         var item = collision.GetComponent<GroundItem>();
         if(item)
         {
-            inventory.AddItem(item.item, item.amount);
+            inventory.AddItem(new Item(item.item), item.amount);
             Destroy(collision.gameObject);
         }
     }
 
     private void OnApplicationQuit()
     {
-        //inventory.Container.Clear();
+        inventory.Container.items.Clear();
     }
 
     private void Update()
