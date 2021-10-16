@@ -15,5 +15,13 @@ MonoBehaviour:
   Id: 0
   uiDisplay: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   type: 0
-  Description: Weapon
-  damage: 5
+  Description: wwww
+  Buffs:
+  - attribute: 0
+    value: 0
+    min: 1
+    max: 5
+  - attribute: 2
+    value: 0
+    min: 1
+    max: 5
